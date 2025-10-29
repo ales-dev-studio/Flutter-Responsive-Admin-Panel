@@ -123,8 +123,7 @@ class AppTypography extends ThemeExtension<AppTypography> {
     );
   }
 
-  // Light theme typography
-  static AppTypography light = AppTypography(
+  static AppTypography typography = AppTypography(
     displayLarge: GoogleFonts.montserrat(
       fontSize: 57,
       fontWeight: FontWeight.w600,
@@ -221,7 +220,4 @@ class AppTypography extends ThemeExtension<AppTypography> {
       letterSpacing: 0.4,
     ),
   );
-
-  // Dark theme will be implemented later
-  static AppTypography dark = light;
 }

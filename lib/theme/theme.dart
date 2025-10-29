@@ -1,22 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_responsive_admin_panel/theme/typography.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   //
   // Light theme
   //
-  static final light = ThemeData(
-    fontFamily: GoogleFonts.montserrat().fontFamily,
-  ).copyWith(
-    extensions: [AppTypography.light],
+  static final light = ThemeData.light().copyWith(
+    extensions: [AppTypography.typography],
+    textTheme: TextTheme(
+      bodyLarge: AppTypography.typography.bodyLarge.copyWith(
+        color: Colors.black,
+      ),
+      bodyMedium: AppTypography.typography.bodyMedium.copyWith(
+        color: Colors.black,
+      ),
+      bodySmall: AppTypography.typography.bodySmall.copyWith(
+        color: Colors.black,
+      ),
+      displayLarge: AppTypography.typography.displayLarge.copyWith(
+        color: Colors.black,
+      ),
+      displayMedium: AppTypography.typography.displayMedium.copyWith(
+        color: Colors.black,
+      ),
+      displaySmall: AppTypography.typography.displaySmall.copyWith(
+        color: Colors.black,
+      ),
+      labelLarge: AppTypography.typography.labelLarge.copyWith(
+        color: Colors.black,
+      ),
+      labelMedium: AppTypography.typography.labelMedium.copyWith(
+        color: Colors.black,
+      ),
+      labelSmall: AppTypography.typography.labelSmall.copyWith(
+        color: Colors.black,
+      ),
+      headlineLarge: AppTypography.typography.headlineLarge.copyWith(
+        color: Colors.black,
+      ),
+      headlineMedium: AppTypography.typography.headlineMedium.copyWith(
+        color: Colors.black,
+      ),
+      headlineSmall: AppTypography.typography.headlineSmall.copyWith(
+        color: Colors.black,
+      ),
+      titleLarge: AppTypography.typography.titleLarge.copyWith(
+        color: Colors.black,
+      ),
+      titleMedium: AppTypography.typography.titleMedium.copyWith(
+        color: Colors.black,
+      ),
+      titleSmall: AppTypography.typography.titleSmall.copyWith(
+        color: Colors.black,
+      ),
+    ),
     colorScheme: ColorScheme.fromSeed(
       seedColor: Colors.deepPurpleAccent,
       brightness: Brightness.light,
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.white,
-      titleTextStyle: AppTypography.light.bodyLarge.copyWith(
+      titleTextStyle: AppTypography.typography.bodyLarge.copyWith(
         color: Colors.black,
         fontSize: 17,
       ),
@@ -45,7 +89,62 @@ class AppTheme {
   // Dark theme
   //
   static final dark = ThemeData.dark().copyWith(
-    extensions: [AppTypography.dark],
+    extensions: [AppTypography.typography],
+    textTheme: TextTheme(
+      bodyLarge: AppTypography.typography.bodyLarge.copyWith(
+        color: Colors.white,
+      ),
+      bodyMedium: AppTypography.typography.bodyMedium.copyWith(
+        color: Colors.white,
+      ),
+      bodySmall: AppTypography.typography.bodySmall.copyWith(
+        color: Colors.white,
+      ),
+      displayLarge: AppTypography.typography.displayLarge.copyWith(
+        color: Colors.white,
+      ),
+      displayMedium: AppTypography.typography.displayMedium.copyWith(
+        color: Colors.white,
+      ),
+      displaySmall: AppTypography.typography.displaySmall.copyWith(
+        color: Colors.white,
+      ),
+      labelLarge: AppTypography.typography.labelLarge.copyWith(
+        color: Colors.white,
+      ),
+      labelMedium: AppTypography.typography.labelMedium.copyWith(
+        color: Colors.white,
+      ),
+      labelSmall: AppTypography.typography.labelSmall.copyWith(
+        color: Colors.white,
+      ),
+      headlineLarge: AppTypography.typography.headlineLarge.copyWith(
+        color: Colors.white,
+      ),
+      headlineMedium: AppTypography.typography.headlineMedium.copyWith(
+        color: Colors.white,
+      ),
+      headlineSmall: AppTypography.typography.headlineSmall.copyWith(
+        color: Colors.white,
+      ),
+      titleLarge: AppTypography.typography.titleLarge.copyWith(
+        color: Colors.white,
+      ),
+      titleMedium: AppTypography.typography.titleMedium.copyWith(
+        color: Colors.white,
+      ),
+      titleSmall: AppTypography.typography.titleSmall.copyWith(
+        color: Colors.white,
+      ),
+    ),
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: Colors.deepPurpleAccent,
+      brightness: Brightness.dark,
+    ),
+    appBarTheme: AppBarTheme(
+      titleTextStyle: AppTypography.typography.bodyLarge.copyWith(fontSize: 17),
+      surfaceTintColor: Colors.transparent,
+    ),
   );
 }
 
