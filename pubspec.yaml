@@ -16,6 +16,7 @@ dependencies:
   flutter_bloc: ^8.1.3
   font_awesome_flutter: ^10.9.1
   countries_world_map: ^1.3.0
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
