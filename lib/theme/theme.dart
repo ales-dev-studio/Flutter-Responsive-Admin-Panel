@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_responsive_admin_panel/theme/colors.dart';
 import 'package:flutter_responsive_admin_panel/theme/typography.dart';
-
-import 'colors.dart';
 
 class AppTheme {
   //
@@ -146,7 +145,9 @@ class AppTheme {
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: Color(0xff141218),
-      titleTextStyle: AppTypography.typography.bodyLarge.copyWith(fontSize: 17),
+      titleTextStyle: AppTypography.typography.bodyLarge.copyWith(
+        color: Colors.white,
+      ),
       surfaceTintColor: Colors.transparent,
       centerTitle: false,
     ),
