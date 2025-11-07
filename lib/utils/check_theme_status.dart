@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// check enable dark mode or not
+/// Check if dark mode is enabled or not
 bool checkDarkMode(final BuildContext context) {
   final ThemeData theme = Theme.of(context);
   if (theme.brightness == Brightness.dark) {
@@ -9,7 +9,7 @@ bool checkDarkMode(final BuildContext context) {
   return false;
 }
 
-/// check enable dark mode or not
+/// Check if light mode is enabled or not
 bool checkLightMode(final BuildContext context) {
   final ThemeData theme = Theme.of(context);
   if (theme.brightness == Brightness.light) {

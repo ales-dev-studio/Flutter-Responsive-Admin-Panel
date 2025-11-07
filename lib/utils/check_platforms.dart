@@ -2,7 +2,7 @@ import 'dart:io' show Platform;
 
 import 'package:flutter/foundation.dart';
 
-class PlatformChecker {
+class CheckPlatformsUtil {
   static bool isIOS() {
     if (kIsWeb) {
       return false;
@@ -47,5 +47,15 @@ class PlatformChecker {
       return false;
     }
     return true;
+  }
+
+  static bool isMobile() {
+    if (kIsWeb) {
+      return false;
+    }
+    if (Platform.isAndroid || Platform.isIOS) {
+      return true;
+    }
+    return false;
   }
 }

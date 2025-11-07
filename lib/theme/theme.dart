@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_responsive_admin_panel/theme/typography.dart';
 
+import 'colors.dart';
+
 class AppTheme {
   //
   // Light theme
@@ -55,26 +57,26 @@ class AppTheme {
       ),
     ),
     colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.deepPurpleAccent,
+      seedColor: AppColors.primaryColor,
       brightness: Brightness.light,
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.white,
       titleTextStyle: AppTypography.typography.bodyLarge.copyWith(
         color: Colors.black,
-        fontSize: 17,
       ),
       surfaceTintColor: Colors.transparent,
+      centerTitle: false,
     ),
     navigationBarTheme: NavigationBarThemeData(
       backgroundColor: Colors.white,
       labelTextStyle: WidgetStateProperty.resolveWith((
-        Set<WidgetState> states,
-      ) {
+          Set<WidgetState> states,
+          ) {
         final Color color =
-            states.contains(WidgetState.selected)
-                ? Colors.deepPurpleAccent
-                : Colors.black;
+        states.contains(WidgetState.selected)
+            ? AppColors.primaryColor
+            : Colors.black;
         return TextStyle(
           color: color,
           fontWeight: FontWeight.w600,
@@ -82,6 +84,7 @@ class AppTheme {
         );
       }),
     ),
+    drawerTheme: DrawerThemeData(backgroundColor: Colors.white),
     scaffoldBackgroundColor: Colors.white,
   );
 
@@ -138,12 +141,14 @@ class AppTheme {
       ),
     ),
     colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.deepPurpleAccent,
+      seedColor: AppColors.primaryColor,
       brightness: Brightness.dark,
     ),
     appBarTheme: AppBarTheme(
+      backgroundColor: Color(0xff141218),
       titleTextStyle: AppTypography.typography.bodyLarge.copyWith(fontSize: 17),
       surfaceTintColor: Colors.transparent,
+      centerTitle: false,
     ),
   );
 }

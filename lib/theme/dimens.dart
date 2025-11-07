@@ -26,9 +26,9 @@ class Dimens {
   // Small corner radius, equal to the base value.
   static const double smallCorners = base;
 
-  // Breakpoint for very small devices (e.g., small smartphones).
-  static const double verySmallDeviceBreakPoint = 376.0;
-
+  //
+  // Common Industry Breakpoints
+  //
   // Breakpoint for small devices (e.g., larger smartphones).
   static const double smallDeviceBreakPoint = 576.0;
 

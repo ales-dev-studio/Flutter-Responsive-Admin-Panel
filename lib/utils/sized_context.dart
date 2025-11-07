@@ -5,7 +5,7 @@ import 'check_platforms.dart';
 
 extension SizedContext on BuildContext {
   double get pixelsPerInch =>
-      PlatformChecker.isAndroid() || PlatformChecker.isIOS() ? 150 : 96;
+      CheckPlatformsUtil.isAndroid() || CheckPlatformsUtil.isIOS() ? 150 : 96;
 
   /// Returns if Orientation is landscape
   bool get isLandscape =>
