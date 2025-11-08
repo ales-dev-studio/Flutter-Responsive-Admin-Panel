@@ -6,6 +6,7 @@ import 'package:flutter_responsive_admin_panel/widgets/app_bars/large_app_bar.da
 import 'package:flutter_responsive_admin_panel/widgets/app_bars/small_app_bar.dart';
 import 'package:flutter_responsive_admin_panel/widgets/app_bordered_icon_button.dart';
 import 'package:flutter_responsive_admin_panel/widgets/app_search_bar.dart';
+import 'package:flutter_responsive_admin_panel/widgets/date_filter_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/drawer_menu.dart';
 import 'package:flutter_responsive_admin_panel/widgets/user_profile_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -60,6 +61,7 @@ class DashboardScreen extends StatelessWidget {
                       ],
                       centerWidget: AppSearchBar(),
                     ),
+                  DateFilterSection(),
                 ],
               ),
             ),
