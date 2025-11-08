@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_responsive_admin_panel/utils/check_theme_status.dart';
 import 'package:flutter_responsive_admin_panel/theme/dimens.dart';
+import 'package:flutter_responsive_admin_panel/utils/check_device_size.dart';
+import 'package:flutter_responsive_admin_panel/utils/sized_context.dart';
+import 'package:flutter_responsive_admin_panel/widgets/app_bars/large_app_bar.dart';
+import 'package:flutter_responsive_admin_panel/widgets/app_bars/small_app_bar.dart';
+import 'package:flutter_responsive_admin_panel/widgets/app_bordered_icon_button.dart';
+import 'package:flutter_responsive_admin_panel/widgets/app_search_bar.dart';
+import 'package:flutter_responsive_admin_panel/widgets/drawer_menu.dart';
+import 'package:flutter_responsive_admin_panel/widgets/user_profile_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'bloc/theme_cubit.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -12,26 +16,55 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Dashboard'),
-      ),
-      body: Column(
-        children: [
-          Row(
-            spacing: Dimens.largePadding,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              FaIcon(FontAwesomeIcons.solidMoon),
-              Text('Dark Mode'),
-              Switch(
-                value: checkDarkMode(context),
-                onChanged: (final bool value) {
-                  context.read<ThemeCubit>().toggleTheme();
-                },
+      appBar:
+          isLargeDesktopSize(context)
+              ? null
+              : SmallAppBar(
+                title: 'Dashboard',
+                actions: [
+                  AppBorderedIconButton(icon: FontAwesomeIcons.solidBell),
+                  UserProfileImage(),
+                ],
+                bottom: PreferredSize(
+                  preferredSize: Size.fromHeight(50),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: Dimens.largePadding,
+                      vertical: Dimens.largePadding,
+                    ),
+                    child: AppSearchBar(),
+                  ),
+                ),
+                height: 146,
               ),
-            ],
-          ),
-        ],
+      drawer: !isLargeDesktopSize(context) ? DrawerMenu() : null,
+      body: SingleChildScrollView(
+        child: Row(
+          children: [
+            if (isLargeDesktopSize(context))
+              SizedBox(
+                width: 304,
+                height: context.heightPx,
+                child: Row(children: [DrawerMenu(), VerticalDivider(width: 0)]),
+              ),
+            Expanded(
+              child: Column(
+                spacing: Dimens.largePadding,
+                children: [
+                  if (isLargeDesktopSize(context))
+                    LargeAppBar(
+                      title: 'Dashboard',
+                      actions: [
+                        AppBorderedIconButton(icon: FontAwesomeIcons.solidBell),
+                        UserProfileImage(),
+                      ],
+                      centerWidget: AppSearchBar(),
+                    ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
