@@ -6,6 +6,7 @@ import 'package:flutter_responsive_admin_panel/widgets/app_bars/large_app_bar.da
 import 'package:flutter_responsive_admin_panel/widgets/app_bars/small_app_bar.dart';
 import 'package:flutter_responsive_admin_panel/widgets/app_bordered_icon_button.dart';
 import 'package:flutter_responsive_admin_panel/widgets/app_search_bar.dart';
+import 'package:flutter_responsive_admin_panel/widgets/customer_growth_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/date_filter_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/drawer_menu.dart';
 import 'package:flutter_responsive_admin_panel/widgets/stat_section.dart';
@@ -65,6 +66,15 @@ class DashboardScreen extends StatelessWidget {
                   DateFilterSection(),
                   SizedBox.shrink(),
                   StatSection(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: Dimens.largePadding,
+                    ),
+                    child: Column(
+                      spacing: Dimens.largePadding,
+                      children: [CustomerGrowthSection()],
+                    ),
+                  ),
                 ],
               ),
             ),
