@@ -12,6 +12,7 @@ import 'package:flutter_responsive_admin_panel/widgets/drawer_menu.dart';
 import 'package:flutter_responsive_admin_panel/widgets/main_sections/latest_orders_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/main_sections/revenue_growth_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/main_sections/sales_overview_section.dart';
+import 'package:flutter_responsive_admin_panel/widgets/responsive_layout.dart';
 import 'package:flutter_responsive_admin_panel/widgets/stat_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/user_profile_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -46,6 +47,7 @@ class DashboardScreen extends StatelessWidget {
       drawer: !isLargeDesktopSize(context) ? DrawerMenu() : null,
       body: SingleChildScrollView(
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (isLargeDesktopSize(context))
               SizedBox(
@@ -76,10 +78,34 @@ class DashboardScreen extends StatelessWidget {
                     child: Column(
                       spacing: Dimens.largePadding,
                       children: [
-                        CustomerGrowthSection(),
-                        RevenueGrowthSection(),
-                        SalesOverviewSection(),
-                        LatestOrdersSection(),
+                        ResponsiveLayout(
+                          children: [
+                            SizedBox(
+                              width: getResponsiveSize(context),
+                              child: CustomerGrowthSection(),
+                            ),
+                            SizedBox(width: Dimens.largePadding),
+                            SizedBox(height: Dimens.largePadding),
+                            SizedBox(
+                              width: getResponsiveSize(context),
+                              child: RevenueGrowthSection(),
+                            ),
+                          ],
+                        ),
+                        ResponsiveLayout(
+                          children: [
+                            SizedBox(
+                              width: getResponsiveSize(context),
+                              child: SalesOverviewSection(),
+                            ),
+                            SizedBox(width: Dimens.largePadding),
+                            SizedBox(height: Dimens.largePadding),
+                            SizedBox(
+                              width: getResponsiveSize(context),
+                              child: LatestOrdersSection(),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
@@ -90,5 +116,17 @@ class DashboardScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  double getResponsiveSize(final BuildContext context) {
+    if (isMobileSize(context) || isTabletSize(context)) {
+      return context.widthPx;
+    }
+    if (isDesktopSize(context)) {
+      return context.widthPx * 0.5 - 24;
+    }
+    // For large desktops
+    // When the menu is displayed as a fixed
+    return context.widthPx * 0.5 - 176;
   }
 }
