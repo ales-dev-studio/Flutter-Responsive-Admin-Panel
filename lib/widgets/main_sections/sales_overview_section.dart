@@ -6,7 +6,7 @@ import 'package:flutter_responsive_admin_panel/widgets/products_sold_chart.dart'
 import 'package:flutter_responsive_admin_panel/widgets/typography/app_title.dart';
 import 'package:flutter_responsive_admin_panel/widgets/visitors_growth_stat.dart';
 
-import 'data_source_viewer.dart';
+import '../data_source_viewer.dart';
 
 class SalesOverviewSection extends StatelessWidget {
   const SalesOverviewSection({super.key});

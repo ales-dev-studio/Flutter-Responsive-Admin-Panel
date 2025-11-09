@@ -9,8 +9,9 @@ import 'package:flutter_responsive_admin_panel/widgets/app_search_bar.dart';
 import 'package:flutter_responsive_admin_panel/widgets/main_sections/customer_growth_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/date_filter_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/drawer_menu.dart';
+import 'package:flutter_responsive_admin_panel/widgets/main_sections/latest_orders_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/main_sections/revenue_growth_section.dart';
-import 'package:flutter_responsive_admin_panel/widgets/sales_overview_section.dart';
+import 'package:flutter_responsive_admin_panel/widgets/main_sections/sales_overview_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/stat_section.dart';
 import 'package:flutter_responsive_admin_panel/widgets/user_profile_image.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -78,6 +79,7 @@ class DashboardScreen extends StatelessWidget {
                         CustomerGrowthSection(),
                         RevenueGrowthSection(),
                         SalesOverviewSection(),
+                        LatestOrdersSection(),
                       ],
                     ),
                   ),
