@@ -7,10 +7,10 @@ import 'package:flutter_responsive_admin_panel/widgets/containers/shaded_contain
 import 'package:flutter_responsive_admin_panel/widgets/typography/app_subtitle.dart';
 import 'package:flutter_responsive_admin_panel/widgets/typography/app_title.dart';
 
-import '../theme/colors.dart';
-import '../theme/dimens.dart';
-import 'app_drop_down_button.dart';
-import 'country_growth_progress_bar.dart';
+import '../../theme/colors.dart';
+import '../../theme/dimens.dart';
+import '../app_drop_down_button.dart';
+import '../country_growth_progress_bar.dart';
 
 class CustomerGrowthSection extends StatelessWidget {
   const CustomerGrowthSection({super.key});
