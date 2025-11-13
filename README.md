@@ -2,6 +2,11 @@
 
 A sleek, modern, and fully **responsive admin panel** built with Flutter. This project features a clean design with **Light & Dark theme** support, various data visualization charts, and a layout that adapts seamlessly from mobile phones to large desktop screens.
 
+### **Screenshots & Demo**
+
+![Demo](https://github.com/ales-dev-studio/Flutter-Responsive-Admin-Panel/blob/main/assets/demo/Light%20mode%20demo.jpg?raw=true)
+![Demo](https://github.com/ales-dev-studio/Flutter-Responsive-Admin-Panel/blob/main/assets/demo/Dark%20mode%20demo.jpg?raw=true)
+
 ### **✨ Features:**
 
 *   **Fully Responsive Design:** Adapts beautifully to all screen sizes (Mobile, Tablet, Desktop).
@@ -44,10 +49,5 @@ flutter pub get
 ```bash
 flutter run
 ```
-
-### **Screenshots & Demo**
-
-![Demo](https://github.com/ales-dev-studio/Flutter-Responsive-Admin-Panel/blob/main/assets/demo/Light%20mode%20demo.jpg?raw=true)
-![Demo](https://github.com/ales-dev-studio/Flutter-Responsive-Admin-Panel/blob/main/assets/demo/Dark%20mode%20demo.jpg?raw=true)
 
 **⭐ Don't forget to star this repo if you found it helpful!**
