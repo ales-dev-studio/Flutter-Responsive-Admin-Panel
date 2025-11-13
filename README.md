@@ -7,7 +7,7 @@ A sleek, modern, and fully **responsive admin panel** built with Flutter. This p
 ![Demo](https://github.com/ales-dev-studio/Flutter-Responsive-Admin-Panel/blob/main/assets/demo/Light%20mode%20demo.jpg?raw=true)
 ![Demo](https://github.com/ales-dev-studio/Flutter-Responsive-Admin-Panel/blob/main/assets/demo/Dark%20mode%20demo.jpg?raw=true)
 
-### **✨ Features:**
+### **Features:**
 
 *   **Fully Responsive Design:** Adapts beautifully to all screen sizes (Mobile, Tablet, Desktop).
 *   **Dark & Light Themes:** Seamlessly switch between themes, managed efficiently with the `flutter_bloc` (Cubit) state management.
