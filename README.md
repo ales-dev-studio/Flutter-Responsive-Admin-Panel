@@ -28,7 +28,6 @@ A sleek, modern, and fully **responsive admin panel** built with Flutter. This p
 ### **Tech Stack & Packages:**
 
 *   **Framework:** [Flutter](https://flutter.dev/)
-*   **State Management:** [flutter_bloc](https://pub.dev/packages/flutter_bloc) (Cubit)
 *   **Charts:** [fl_chart](https://pub.dev/packages/fl_chart)
 *   **World Map:** [countries_world_map](https://pub.dev/packages/countries_world_map)
 *   **Icons:** [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
