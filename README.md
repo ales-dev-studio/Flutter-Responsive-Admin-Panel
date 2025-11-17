@@ -1,4 +1,4 @@
-### Flutter responsive admin panel
+### Flutter responsive admin panel UI
 
 A sleek, modern, and fully **responsive admin panel** built with Flutter. This project features a clean design with **Light & Dark theme** support, various data visualization charts, and a layout that adapts seamlessly from mobile phones to large desktop screens.
 
